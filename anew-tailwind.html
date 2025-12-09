@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Anew Tailwind Template</title>
+    <meta name="description" content="Minimal Tailwind CSS starter template" />
+    <!-- Tailwind Play CDN for quick prototyping -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Optional: configure Tailwind (colors, dark mode, etc.)
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5a4'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+    <header class="bg-white dark:bg-gray-800 shadow">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="h-8 w-8 rounded-md bg-primary flex items-center justify-center text-white font-semibold">A</div>
+                    <span class="font-semibold">Anew Tailwind</span>
+                </a>
+                <nav class="space-x-4 text-sm">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 dark:text-gray-300">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 dark:text-gray-300">Docs</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 dark:text-gray-300">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section class="text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl font-extrabold mb-3">Fast, Responsive UI with Tailwind CSS</h1>
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">A minimal starter layout to build on. Uses the Tailwind Play CDN — great for prototypes and small projects.</p>
+            <div class="mt-6 flex justify-center gap-3">
+                <a href="#" class="inline-block bg-primary text-white px-4 py-2 rounded-md shadow hover:opacity-95">Get Started</a>
+                <a href="#" class="inline-block border border-gray-200 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-200">Learn More</a>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-semibold mb-4">Features</h2>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-2">Responsive Layout</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Build layouts that adapt across devices with utility classes.</p>
+                </article>
+
+                <article class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-2">Utility-First</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Compose small utilities to create complex designs without custom CSS.</p>
+                </article>
+
+                <article class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-2">Customizable</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Extend the design system through a config file or the CDN config shown above.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-200 dark:border-gray-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-gray-600 dark:text-gray-400">
+            © <span id="year"></span> Anew Tailwind — Built with Tailwind CSS
+        </div>
+    </footer>
+
+    <script>
+        // small script: set year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html></footer>
