@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAH PAGE - CuneiCode</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Custom styles to complement Tailwind */
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+    
+    /* Smooth transitions */
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+    
+    /* Custom sidebar animation */
+    @keyframes slideIn {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(0); }
+    }
+    
+    .sidebar-animation {
+      animation: slideIn 0.3s ease-out;
+    }
+    
+    /* Custom hover effects */
+    .nav-link:hover {
+      background-color: rgba(59, 130, 246, 0.1);
+    }
+    
+    /* Active nav link */
+    .active {
+      background-color: rgba(59, 130, 246, 0.15);
+      border-left: 4px solid #3b82f6;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <div class="flex min-h-screen">
+    <!-- Sidebar Navigation (Hidden on mobile, shown on larger screens) -->
+    <aside id="sidebar" class="w-64 bg-gradient-to-b from-blue-900 to-blue-800 text-white shadow-lg hidden lg:flex lg:flex-col">
+      <div class="p-6">
+        <!-- Logo/Header -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-code text-white text-lg"></i>
+          </div>
+          <h1 class="text-2xl font-bold">Cunei<span class="text-cyan-300">Code</span></h1>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="mt-10">
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all active">
+                <i class="fas fa-tv text-lg w-6 text-center"></i>
+                <span class="font-medium">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="updates.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all">
+                <i class="fa-solid fa-rotate-right text-lg w-6 text-center"></i>
+                <span class="font-medium">Updates</span>
+              </a>
+            </li>
+            <li>
+              <a href="BugReport.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all">
+                <i class="fa-solid fa-file-lines text-lg w-6 text-center"></i>
+                <span class="font-medium">Bug Report</span>
+              </a>
+            </li>
+            <li>
+              <a href="ChangeRequest.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all">
+                <i class="fa-solid fa-retweet text-lg w-6 text-center"></i>
+                <span class="font-medium">Change Request</span>
+              </a>
+            </li>
+            <li>
+              <a href="Customers.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all">
+                <i class="fas fa-user text-lg w-6 text-center"></i>
+                <span class="font-medium">Customers</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        
+        <!-- Footer in sidebar -->
+        <div class="mt-auto pt-6 border-t border-blue-700">
+          <div class="text-center text-blue-300 text-sm">
+            <p>© 2023 CuneiCode</p>
+            <p class="mt-1">All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+      <!-- Header with mobile menu button -->
+      <header class="bg-white shadow-sm">
+        <div class="flex justify-between items-center p-4">
+          <!-- Mobile menu button -->
+          <button id="toggle-btn" class="lg:hidden bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-all">
+            <i class="fas fa-bars mr-2"></i>
+            <span>Menu</span>
+          </button>
+          
+          <!-- Page title -->
+          <h2 class="text-xl font-bold text-gray-800 ml-4 lg:ml-0">Dashboard</h2>
+          
+          <!-- User profile (placeholder) -->
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center text-white font-bold">
+              U
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main content area -->
+      <main class="flex-1 p-6">
+        <!-- Welcome section -->
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg border border-blue-100">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-2/3">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                  Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">CuneiCode</span>
+                </h1>
+                <p class="text-gray-600 text-lg mb-6">
+                  Your ultimate platform for software management, bug tracking, and customer relations. Streamline your development process with our powerful tools.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <a href="updates.html" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all flex items-center">
+                    <i class="fas fa-rocket mr-2"></i>
+                    Latest Updates
+                  </a>
+                  <a href="BugReport.html" class="bg-white hover:bg-gray-100 text-blue-600 font-medium py-3 px-6 rounded-lg border border-blue-200 transition-all flex items-center">
+                    <i class="fas fa-bug mr-2"></i>
+                    Report Bug
+                  </a>
+                </div>
+              </div>
+              <div class="md:w-1/3 mt-8 md:mt-0 flex justify-center">
+                <div class="w-64 h-64 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center shadow-xl">
+                  <i class="fas fa-code text-white text-7xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features section -->
+          <div class="mt-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Platform Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <i class="fas fa-sync-alt text-blue-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Real-time Updates</h3>
+                <p class="text-gray-600">Stay informed with the latest changes and updates to your projects in real-time.</p>
+              </div>
+              
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <i class="fas fa-bug text-green-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Bug Tracking</h3>
+                <p class="text-gray-600">Efficiently report, track, and resolve bugs with our streamlined workflow.</p>
+              </div>
+              
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                  <i class="fas fa-users text-purple-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Customer Management</h3>
+                <p class="text-gray-600">Manage customer relationships and requests all in one centralized location.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="mt-12 bg-white rounded-xl p-6 shadow-md border border-gray-100">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Quick Stats</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <p class="text-sm text-blue-600 font-medium">Active Projects</p>
+                <p class="text-2xl font-bold text-gray-800">12</p>
+              </div>
+              <div class="bg-green-50 p-4 rounded-lg">
+                <p class="text-sm text-green-600 font-medium">Bugs Fixed</p>
+                <p class="text-2xl font-bold text-gray-800">47</p>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <p class="text-sm text-purple-600 font-medium">Customers</p>
+                <p class="text-2xl font-bold text-gray-800">24</p>
+              </div>
+              <div class="bg-amber-50 p-4 rounded-lg">
+                <p class="text-sm text-amber-600 font-medium">Change Requests</p>
+                <p class="text-2xl font-bold text-gray-800">8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <!-- Footer -->
+      <footer class="bg-white border-t border-gray-200 p-4 text-center text-gray-500 text-sm">
+        <p>© 2023 CuneiCode. All rights reserved. | <a href="#" class="text-blue-600 hover:text-blue-800">Privacy Policy</a> | <a href="#" class="text-blue-600 hover:text-blue-800">Terms of Service</a></p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Mobile sidebar overlay (hidden by default) -->
+  <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+  
+  <!-- Mobile sidebar (hidden by default) -->
+  <aside id="mobile-sidebar" class="fixed top-0 left-0 w-64 h-full bg-gradient-to-b from-blue-900 to-blue-800 text-white shadow-xl z-50 transform -translate-x-full transition-transform duration-300 sidebar-animation">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-10">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-code text-white text-lg"></i>
+          </div>
+          <h1 class="text-xl font-bold">Cunei<span class="text-cyan-300">Code</span></h1>
+        </div>
+        <button id="close-sidebar" class="text-white text-2xl">&times;</button>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <nav>
+        <ul class="space-y-2">
+          <li>
+            <a href="index.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all active">
+              <i class="fas fa-tv text-lg w-6 text-center"></i>
+              <span class="font-medium">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="updates.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all">
+              <i class="fa-solid fa-rotate-right text-lg w-6 text-center"></i>
+              <span class="font-medium">Updates</span>
+            </a>
+          </li>
+          <li>
+            <a href="BugReport.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all">
+              <i class="fa-solid fa-file-lines text-lg w-6 text-center"></i>
+              <span class="font-medium">Bug Report</span>
+            </a>
+          </li>
+          <li>
+            <a href="ChangeRequest.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all">
+              <i class="fa-solid fa-retweet text-lg w-6 text-center"></i>
+              <span class="font-medium">Change Request</span>
+            </a>
+          </li>
+          <li>
+            <a href="Customers.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg transition-all">
+              <i class="fas fa-user text-lg w-6 text-center"></i>
+              <span class="font-medium">Customers</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <script>
+    // Mobile sidebar toggle functionality
+    const toggleBtn = document.getElementById('toggle-btn');
+    const closeSidebarBtn = document.getElementById('close-sidebar');
+    const mobileSidebar = document.getElementById('mobile-sidebar');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    
+    toggleBtn.addEventListener('click', () => {
+      mobileSidebar.classList.remove('-translate-x-full');
+      mobileOverlay.classList.remove('hidden');
+    });
+    
+    closeSidebarBtn.addEventListener('click', () => {
+      mobileSidebar.classList.add('-translate-x-full');
+      mobileOverlay.classList.add('hidden');
+    });
+    
+    mobileOverlay.addEventListener('click', () => {
+      mobileSidebar.classList.add('-translate-x-full');
+      mobileOverlay.classList.add('hidden');
+    });
+    
+    // Set active nav link based on current page
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
